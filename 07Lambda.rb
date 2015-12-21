@@ -10,7 +10,7 @@ end
 
 p ajax(-> x {x* 2}, 3) # Lambda is a first object
 
-p ajax({|x| x * 2}, 3) # Error !
+#p ajax({|x| x * 2}, 3) # Error !
 
 p ajax(Proc.new{|x| x * 2}, 3) # make a bloc a object
 
