@@ -1,14 +1,12 @@
 class Person
-
     def hello
         puts "Hello World"
     end
 end
 
+# david and tom
 david = Person.new
 david.hello
-
-#
 tom = Person.new
 tom.hello
 
@@ -17,17 +15,29 @@ def david.hello
     puts "zzz..."
 end
 
-david.hello
-tom.hello
+david.hello # zzz...
+tom.hello   # Hello World
 
-# Open Class
+# Open Class (Monkey Patch)
 class Person
-    def new_hello
-        puts "How are you?"
+    def chao
+        puts "Chao!"
     end
-    alias org_hello hello
-    alias hello new_hello
+    alias org_hello hello # Hello World
+    alias hello chao # Chao!
 end
 
-david.hello
-tom.hello
+david.hello # zzz...
+tom.hello   # Chao!
+
+david.org_hello # Hello World
+
+# Prepend (Monkey Patch)
+module PersonPatch
+    def chao
+        puts "OMG!"
+    end
+end
+
+Person.send :prepend, PersonPatch
+Person.new.chao

@@ -1,4 +1,4 @@
-class Person
+class Human
 
     attr_accessor :age
 
@@ -9,12 +9,12 @@ class Person
     def fullname
         return @first + " " + @last
     end
-    def getage
+    def get_age
         return @age
     end
 end
 
-david = Person.new("David", "Thompson")
+david = Human.new("David", "Thompson")
 p david.fullname
 david.age = 29
-p david.getage
+p david.get_age

@@ -1,14 +1,11 @@
 module Hello
     def sayHello
-        #{canSpeakEnglish} ? "Hello World" : "Sorry..."
+        "Hi!"
     end
 end
 
 class Person2
     include Hello
-    def canSpeakEnglish?
-        true
-    end
 end
 
 
