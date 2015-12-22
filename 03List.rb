@@ -1,4 +1,4 @@
-country = ["Vietnam", "Japan", "US"]
+country = ["Vietnam", "Japan", "US"] # %w(Vietnam Japan US)
 
 for v in country do
     puts v
@@ -12,7 +12,7 @@ country.each{|v|
 new_list = country.collect{|v|
     v.upcase
 }
-puts new_list # ["VIETNAME", "JAPAN", "US"]
+puts new_list # ["VIETNAM", "JAPAN", "US"]
 
 # map is an alias of collect
 p country.map{|v|

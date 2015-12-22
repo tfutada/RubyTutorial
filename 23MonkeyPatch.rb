@@ -11,10 +11,10 @@ david.hello # Hello
 # Open Class (Monkey Patch)
 class Person
     def hello
-        "Hi!"
+        'Hi!'
     end
     def chao
-        puts "Chao!"
+        puts 'Chao!'
     end
 end
 
@@ -26,7 +26,7 @@ tom.hello   # Hi!
 # Prepend (Monkey Patch)
 module PersonPatch
     def chao
-        puts "OMG!"
+        puts 'OMG!'
     end
 end
 

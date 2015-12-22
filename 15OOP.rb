@@ -6,8 +6,8 @@ class Human
         @first = first
         @last = last
     end
-    def fullname
-        return @first + " " + @last
+    def full_name
+        return @first + ' ' + @last
     end
     def get_age
         return @age
@@ -15,6 +15,6 @@ class Human
 end
 
 david = Human.new("David", "Thompson")
-p david.fullname
+p david.full_name
 david.age = 29
 p david.get_age
