@@ -17,3 +17,5 @@ obj.dynamic_Hello # say, Hello
 obj.dynamic_Hi    # say, Hi
 obj.dynamic_Chao  # say, Chao
 
+method = :dynamic_Hello
+obj.send(method) # like reflection of Java
