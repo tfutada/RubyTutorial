@@ -18,10 +18,10 @@ class Person
     end
 end
 
-david.hello # Hi!
+p david.hello # Hi!
 david.chao  # Chao!
 tom = Person.new
-tom.hello   # Hi!
+p tom.hello   # Hi!
 
 # Prepend (Monkey Patch)
 module PersonPatch
@@ -32,4 +32,4 @@ end
 
 Person.send :prepend, PersonPatch
 
-david.chao # Chao!
+david.chao # OMG!
